@@ -1,0 +1,21 @@
+:root {
+  --bg: #f5fafa;
+  --text: #222;
+  --card-bg: #fff;
+  --nav-bg: #ffffff;
+  --primary: #007ba7;
+  --btn-border: #007ba7;
+  --btn-hover-bg: #007ba7;
+  --btn-hover-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --card-bg: #1e1e1e;
+  --nav-bg: #1e1e1e;
+  --primary: #90caf9;
+  --btn-border: #90caf9;
+  --btn-hover-bg: #90caf9;
+  --btn-hover-text: #121212;
+}

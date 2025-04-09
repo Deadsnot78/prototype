@@ -1,0 +1,138 @@
+<!-- suivi.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Suivi consommation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5fafa;
+      color: #222;
+    }
+
+    .app {
+      max-width: 390px;
+      margin: auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #007ba7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    main {
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-bottom: 16px;
+    }
+
+    .card h2 {
+      font-size: 16px;
+      color: #007ba7;
+      margin-bottom: 10px;
+    }
+
+    .sensor {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .sensor:last-child {
+      border-bottom: none;
+    }
+
+    .total {
+      font-weight: bold;
+      color: #2e7d32;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .house-diagram {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .house-diagram img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background: #ffffff;
+      border-top: 1px solid #eee;
+      padding: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #007ba7;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Suivi consommation</h1>
+    </header>
+    <main>
+      <div class="card">
+        <h2>Consommation en direct</h2>
+        <div class="sensor"><span>🚿 Douche</span><span>-- L</span></div>
+        <div class="sensor"><span>🚽 Toilettes</span><span>-- L</span></div>
+        <div class="sensor"><span>🚰 Robinet cuisine</span><span>-- L</span></div>
+        <div class="sensor"><span>🧼 Lave-linge</span><span>-- L</span></div>
+        <div class="sensor"><span>🍽️ Lave-vaisselle</span><span>-- L</span></div>
+        <div class="total">Total aujourd'hui : -- L</div>
+        <div class="total">Total cette semaine : -- L</div>
+      </div>
+
+      <div class="house-diagram">
+        <h2>Schéma de la maison</h2>
+        <img src="images/maison-schema.png" alt="Schéma des capteurs dans la maison">
+        <p style="font-size: 13px; color: #666;">Visualisation des capteurs (Wi-Fi / Zigbee) installés aux points d’eau.</p>
+      </div>
+    </main>
+    <nav>
+      <a href="index.html">🏠 Accueil</a>
+      <a href="conseils.html">📋 Conseils</a>
+      <a href="profil.html">👤 Profil</a>
+      <a href="suivi.html">🚰 suivi</a>
+      <a href="recyclage.html">♻️🚰 recyclage</a>
+    </nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- suivi.html optimisé -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Suivi consommation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="app">
+    <header role="banner">
+      <h1>Suivi consommation</h1>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Consommation en direct</h2>
+        <div class="sensor"><span>🚿 Douche</span><span>-- L</span></div>
+        <div class="sensor"><span>🚽 Toilettes</span><span>-- L</span></div>
+        <div class="sensor"><span>🚰 Robinet cuisine</span><span>-- L</span></div>
+        <div class="sensor"><span>🧼 Lave-linge</span><span>-- L</span></div>
+        <div class="sensor"><span>🍽️ Lave-vaisselle</span><span>-- L</span></div>
+        <div class="total">Total aujourd'hui : -- L</div>
+        <div class="total">Total cette semaine : -- L</div>
+      </section>
+      <section class="house-diagram">
+        <h2>Schéma de la maison</h2>
+        <img src="images/maison-schema.png" alt="Schéma des capteurs dans la maison" />
+        <p class="caption">Visualisation des capteurs connectés (Wi-Fi / Zigbee) aux points d’eau.</p>
+      </section>
+    </main>
+    <nav role="navigation" aria-label="Navigation principale">
+      <a href="index.html">🏠 <span>Accueil</span></a>
+      <a href="conseils.html">📋 <span>Conseils</span></a>
+      <a href="profil.html">👤 <span>Profil</span></a>
+      <a href="suivi.html">🚰 <span>Suivi</span></a>
+      <a href="recyclage.html">♻️🚰 <span>Recyclage</span></a>
+      <a href="donnees.html">🔐 <span>Données</span></a>
+    </nav>
+  </div>
+  <script>
+    // Appliquer les préférences sauvegardées
+    window.onload = () => {
+      const size = localStorage.getItem('fontSize') || 'normal';
+      document.body.classList.toggle('large-text', size === 'large');
+  
+      const isColorblind = localStorage.getItem('colorblind') === 'true';
+      document.body.classList.toggle('colorblind-mode', isColorblind);
+  
+      const isDark = localStorage.getItem('darkmode') === 'true';
+      document.body.classList.toggle('dark-mode', isDark);
+    };
+  </script>  
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!-- recyclage.html optimisé -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Recyclage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/Dark-mode.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="app">
+    <header role="banner">
+      <h1>Recyclage d'eau</h1>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Niveau de la cuve</h2>
+        <div class="gauge" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+          <div class="gauge-fill" style="width: 70%"></div>
+        </div>
+        <div class="metrics">
+          <span>Capacité actuelle :</span>
+          <span>700 L / 1000 L</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Volume d'eau recyclée</h2>
+        <div class="metrics"><span>📅 Aujourd'hui :</span><span>15 L</span></div>
+        <div class="metrics"><span>📈 Cette semaine :</span><span>103 L</span></div>
+        <div class="metrics"><span>📊 Ce mois :</span><span>428 L</span></div>
+      </section>
+
+      <section class="card">
+        <h2>État des filtres</h2>
+        <div class="filter-status"><span>Filtre 1 - Sédiments 20 m</span><span class="status-ok">✅ OK</span></div>
+        <div class="filter-status"><span>Filtre 2 - Sédiments 5 m</span><span class="status-warning">⚠️ À vérifier</span></div>
+        <div class="filter-status"><span>Filtre 3 - KDF Charbon Actif</span><span class="status-ok">✅ OK</span></div>
+        <div class="filter-status"><span>Filtre 4 - Carbon block</span><span class="status-warning">⚠️ Nettoyage conseillé</span></div>
+        <div class="filter-status"><span>Dernier entretien :</span><span>14 mars 2025</span></div>
+        <div class="filters-image">
+          <img src="images/filtres.jpg" alt="Schéma du système de filtration" />
+        </div>
+      </section>
+    </main>
+    <nav role="navigation" aria-label="Navigation principale">
+      <a href="index.html">🏠 <span>Accueil</span></a>
+      <a href="conseils.html">📋 <span>Conseils</span></a>
+      <a href="profil.html">👤 <span>Profil</span></a>
+      <a href="suivi.html">🚰 <span>Suivi</span></a>
+      <a href="recyclage.html">♻️🚰 <span>Recyclage</span></a>
+      <a href="donnees.html">🔐 <span>Données</span></a>
+    </nav>
+  </div>
+  <script src="darkmode.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- index.html optimisé -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="app">
+    <header role="banner">
+      <h1>EauZen</h1>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Suivi de la consommation d’eau</h2>
+        <strong>210 L</strong>
+        <p class="impact">Objectif atteint ✅<br>Impact : 12 kg CO₂ / 5 €</p>
+      </section>
+
+      <button class="button">Voir mes gestes éco</button>
+      <button class="button">Carte des actions locales</button>
+
+      <section class="card">
+        <h2>Suivi de la consommation</h2>
+        <p>Entrez votre consommation ou liez un compteur</p>
+      </section>
+
+      <section class="card">
+        <h2>Gestes éco-responsables</h2>
+        <p>Adoptez des gestes pour économiser et dépolluer</p>
+      </section>
+
+      <section class="card">
+        <h2>Engagement local</h2>
+        <p>Participez à des actions locales sur l’eau</p>
+      </section>
+    </main>
+    <nav role="navigation" aria-label="Navigation principale">
+      <a href="index.html">🏠 <span>Accueil</span></a>
+      <a href="conseils.html">📋 <span>Conseils</span></a>
+      <a href="profil.html">👤 <span>Profil</span></a>
+      <a href="suivi.html">🚰 <span>Suivi</span></a>
+      <a href="recyclage.html">♻️🚰 <span>Recyclage</span></a>
+      <a href="donnees.html">🔐 <span>Données</span></a>
+    </nav>
+  </div>
+  <script>
+    // Appliquer les préférences sauvegardées
+    window.onload = () => {
+      const size = localStorage.getItem('fontSize') || 'normal';
+      document.body.classList.toggle('large-text', size === 'large');
+  
+      const isColorblind = localStorage.getItem('colorblind') === 'true';
+      document.body.classList.toggle('colorblind-mode', isColorblind);
+  
+      const isDark = localStorage.getItem('darkmode') === 'true';
+      document.body.classList.toggle('dark-mode', isDark);
+    };
+  </script>  
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!-- conseils.html optimisé avec catégories élargies -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Conseils</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="app">
+    <header role="banner">
+      <h1>EauZen</h1>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Conseils par catégorie</h2>
+
+        <h3>Cuisine 🍽️</h3>
+        <div class="bubble">🚰 Installer un mousseur sur le robinet</div>
+        <div class="bubble">🧼 Utiliser le lave-vaisselle à pleine charge</div>
+        <div class="bubble">🥣 Réutiliser l’eau de rinçage pour arroser les plantes</div>
+        <div class="bubble">💦 Préférer laver les légumes dans une bassine</div>
+
+        <h3>Salle de bain 🚿</h3>
+        <div class="bubble">⏱️ Réduire la durée des douches</div>
+        <div class="bubble">🚿 Installer une douchette économe</div>
+        <div class="bubble">🧽 Couper l’eau pendant le savonnage</div>
+        <div class="bubble">🧴 Privilégier les produits sans rinçage</div>
+
+        <h3>Toilettes 🚽</h3>
+        <div class="bubble">🔄 Réutiliser l’eau de pluie pour les toilettes</div>
+        <div class="bubble">💧 Installer une chasse d’eau double débit</div>
+        <div class="bubble">🚫 Ne pas utiliser les toilettes comme poubelle</div>
+        <div class="bubble">🪠 Vérifier les fuites de réservoir</div>
+
+        <h3>Extérieur / Jardin 🌿</h3>
+        <div class="bubble">🌧️ Récupérer l’eau de pluie</div>
+        <div class="bubble">🪴 Arroser tôt le matin ou tard le soir</div>
+        <div class="bubble">🍃 Utiliser du paillage pour limiter l’évaporation</div>
+        <div class="bubble">🚿 Nettoyer la voiture avec un seau, pas un jet</div>
+
+        <h3>Maison / Général 🏠</h3>
+        <div class="bubble">🛠️ Réparer rapidement les fuites</div>
+        <div class="bubble">♻️ Réutiliser l’eau de cuisson pour les plantes</div>
+        <div class="bubble">📊 Suivre sa consommation régulièrement</div>
+        <div class="bubble">🔧 Fermer les robinets correctement</div>
+
+      </section>
+    </main>
+    <nav role="navigation" aria-label="Navigation principale">
+      <a href="index.html">🏠 <span>Accueil</span></a>
+      <a href="conseils.html">📋 <span>Conseils</span></a>
+      <a href="profil.html">👤 <span>Profil</span></a>
+      <a href="suivi.html">🚰 <span>Suivi</span></a>
+      <a href="recyclage.html">♻️🚰 <span>Recyclage</span></a>
+      <a href="donnees.html">🔐 <span>Données</span></a>
+    </nav>
+  </div>
+  <script>
+    // Appliquer les préférences sauvegardées
+    window.onload = () => {
+      const size = localStorage.getItem('fontSize') || 'normal';
+      document.body.classList.toggle('large-text', size === 'large');
+  
+      const isColorblind = localStorage.getItem('colorblind') === 'true';
+      document.body.classList.toggle('colorblind-mode', isColorblind);
+  
+      const isDark = localStorage.getItem('darkmode') === 'true';
+      document.body.classList.toggle('dark-mode', isDark);
+    };
+  </script>  
+</body>
+</html>
