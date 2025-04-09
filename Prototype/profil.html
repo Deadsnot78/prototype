@@ -1,0 +1,136 @@
+<!-- profil.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Profil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5fafa;
+      color: #222;
+    }
+
+    .app {
+      max-width: 390px;
+      margin: auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #007ba7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    main {
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-bottom: 16px;
+    }
+
+    .card h2 {
+      font-size: 16px;
+      color: #007ba7;
+      margin-bottom: 10px;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #ccc;
+      margin: auto;
+    }
+
+    .info {
+      margin: 10px 0;
+    }
+
+    .info label {
+      font-weight: bold;
+    }
+
+    .button {
+      width: 100%;
+      background: white;
+      border: 2px solid #007ba7;
+      color: #007ba7;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.2s;
+    }
+
+    .button:hover {
+      background: #007ba7;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background: #ffffff;
+      border-top: 1px solid #eee;
+      padding: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #007ba7;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>EauZen</h1>
+    </header>
+    <main>
+      <div class="card">
+        <h2>Mon Profil</h2>
+        <div class="avatar"></div>
+        <div class="info"><label>Nom :</label> Dupont</div>
+        <div class="info"><label>Prénom :</label> Julien</div>
+        <div class="info"><label>Email :</label> julien.dupont@mail.com</div>
+        <div class="info"><label>Objectif :</label> Réduire ma consommation de 20%</div>
+        <button class="button">Modifier le mot de passe</button>
+      </div>
+    </main>
+    <nav>
+      <a href="index.html">🏠 Accueil</a>
+      <a href="conseils.html">📋 Conseils</a>
+      <a href="profil.html">👤 Profil</a>
+      <a href="suivi.html">🚰 suivi</a>
+      <a href="recyclage.html">♻️🚰 recyclage</a>
+    </nav>
+  </div>
+</body>
+</html>
