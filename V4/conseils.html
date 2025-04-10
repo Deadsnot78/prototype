@@ -1,0 +1,109 @@
+<!-- conseils.html optimisé avec catégories élargies -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Conseils</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="styles/Dark-mode.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/nav.css">
+
+</head>
+<body>
+  <div class="app">
+    <header role="banner">
+      <h1>EauZen</h1>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Conseils par catégorie</h2>
+
+        <h3>Cuisine 🍽️</h3>
+        <div class="bubble">🚰 Installer un mousseur sur le robinet</div>
+        <div class="bubble">🧼 Utiliser le lave-vaisselle à pleine charge</div>
+        <div class="bubble">🥣 Réutiliser l’eau de rinçage pour arroser les plantes</div>
+        <div class="bubble">💦 Préférer laver les légumes dans une bassine</div>
+
+        <h3>Salle de bain 🚿</h3>
+        <div class="bubble">⏱️ Réduire la durée des douches</div>
+        <div class="bubble">🚿 Installer une douchette économe</div>
+        <div class="bubble">🧽 Couper l’eau pendant le savonnage</div>
+        <div class="bubble">🧴 Privilégier les produits sans rinçage</div>
+
+        <h3>Toilettes 🚽</h3>
+        <div class="bubble">🔄 Réutiliser l’eau de pluie pour les toilettes</div>
+        <div class="bubble">💧 Installer une chasse d’eau double débit</div>
+        <div class="bubble">🚫 Ne pas utiliser les toilettes comme poubelle</div>
+        <div class="bubble">🪠 Vérifier les fuites de réservoir</div>
+
+        <h3>Extérieur / Jardin 🌿</h3>
+        <div class="bubble">🌧️ Récupérer l’eau de pluie</div>
+        <div class="bubble">🪴 Arroser tôt le matin ou tard le soir</div>
+        <div class="bubble">🍃 Utiliser du paillage pour limiter l’évaporation</div>
+        <div class="bubble">🚿 Nettoyer la voiture avec un seau, pas un jet</div>
+
+        <h3>Maison / Général 🏠</h3>
+        <div class="bubble">🛠️ Réparer rapidement les fuites</div>
+        <div class="bubble">♻️ Réutiliser l’eau de cuisson pour les plantes</div>
+        <div class="bubble">📊 Suivre sa consommation régulièrement</div>
+        <div class="bubble">🔧 Fermer les robinets correctement</div>
+
+      </section>
+    </main>
+    <script src="js/nav.js"></script>
+    <nav class="nav">
+      <!-- Navigation List -->
+      <ul class="nav-content">
+          <!-- Home Navigation Item -->
+          <li class="nav-list">
+              <a href="index.html" class="link-item active">
+                  <i class='bx bxs-home link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Home</span> <!-- Text for Home -->
+              </a>
+          </li>
+          <!-- Content Navigation Item -->
+          <li class="nav-list">
+              <a href="conseils.html" class="link-item">
+                  <i class='bx bxs-help-circle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Conseils</span> <!-- Text for Content -->
+              </a>
+          </li>
+          <!-- Analytics Navigation Item -->
+          <li class="nav-list">
+              <a href="profil.html" class="link-item">
+                  <i class='bx bxs-user link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Profil</span> <!-- Text for Analytics -->
+              </a>
+          </li>
+          <!-- Comments Navigation Item -->
+          <li class="nav-list">
+              <a href="suivi.html" class="link-item">
+                  <i class='bx bxs-bar-chart-alt-2 link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Suivi</span> <!-- Text for Comments -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+              <a href="recyclage.html" class="link-item">
+                  <i class='bx bx-recycle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Recyclage</span> <!-- Text for Profile -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+            <a href="donnees.html" class="link-item">
+                <i class='bx bxs-data link-icon'></i> <!-- Icon -->
+                <span class="link-text">Données</span> <!-- Text for Profile -->
+            </a>
+        </li>
+          <!-- Indicator for Active Navigation Item -->
+          <span class="indicator"></span>
+      </ul>
+  </nav>
+  </div>
+  <script src="darkmode.js"></script> 
+</body>
+</html>

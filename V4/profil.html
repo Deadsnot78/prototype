@@ -1,0 +1,187 @@
+<!-- profil.html optimisé avec préférences persistantes et mode nuit -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Profil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="styles/Dark-mode.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/accessibility.css">
+
+</head>
+<body>
+  <div class="app">
+    <header role="banner">
+      <h1>EauZen</h1>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Mon Profil</h2>
+        <div class="avatar" aria-label="Photo de profil" role="img"></div>
+        <div class="info"><strong>Nom :</strong> Dupont</div>
+        <div class="info"><strong>Prénom :</strong> Julien</div>
+        <div class="info"><strong>Email :</strong> julien.dupont@mail.com</div>
+        <div class="info"><strong>Objectif :</strong> Réduire ma consommation de 20%</div>
+        <button class="button">Modifier le mot de passe</button>
+        <button class="button" id="accessibilityToggle" aria-expanded="false" aria-controls="accessibility">🧑‍🦽 Aide à l'accessibilité</button>
+        
+
+<div id="accessibility" class="accessibility-info hidden">
+  <h3>Cette application est conçue pour être accessible :</h3>
+          <ul>
+            <li>✅ Navigation au clavier possible</li>
+            <li>✅ Contrastes élevés pour une meilleure lisibilité</li>
+            <li>✅ Compatible avec les lecteurs d'écran</li>
+          </ul>
+
+  <div class="access-item">
+    <span class="label">Taille du texte</span>
+    <select id="fontSize">
+      <option value="normal">Normale</option>
+      <option value="large">Grande</option>
+    </select>
+  </div>
+
+  <div class="access-item">
+    <span class="label">Mode daltonien</span>
+    <label class="switch">
+      <input type="checkbox" id="colorblindToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="access-item">
+    <span class="label">Mode nuit</span>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="access-item">
+    <span class="label">Lecture vocale</span>
+    <label class="switch">
+      <input type="checkbox" id="voiceToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>
+
+      </section>
+    </main>
+    <script src="js/nav.js"></script>
+    <nav class="nav">
+      <!-- Navigation List -->
+      <ul class="nav-content">
+          <!-- Home Navigation Item -->
+          <li class="nav-list">
+              <a href="index.html" class="link-item active">
+                  <i class='bx bxs-home link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Home</span> <!-- Text for Home -->
+              </a>
+          </li>
+          <!-- Content Navigation Item -->
+          <li class="nav-list">
+              <a href="conseils.html" class="link-item">
+                  <i class='bx bxs-help-circle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Conseils</span> <!-- Text for Content -->
+              </a>
+          </li>
+          <!-- Analytics Navigation Item -->
+          <li class="nav-list">
+              <a href="profil.html" class="link-item">
+                  <i class='bx bxs-user link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Profil</span> <!-- Text for Analytics -->
+              </a>
+          </li>
+          <!-- Comments Navigation Item -->
+          <li class="nav-list">
+              <a href="suivi.html" class="link-item">
+                  <i class='bx bxs-bar-chart-alt-2 link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Suivi</span> <!-- Text for Comments -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+              <a href="recyclage.html" class="link-item">
+                  <i class='bx bx-recycle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Recyclage</span> <!-- Text for Profile -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+            <a href="donnees.html" class="link-item">
+                <i class='bx bxs-data link-icon'></i> <!-- Icon -->
+                <span class="link-text">Données</span> <!-- Text for Profile -->
+            </a>
+        </li>
+          <!-- Indicator for Active Navigation Item -->
+          <span class="indicator"></span>
+      </ul>
+  </nav>
+  </div>
+
+  <script src="js/darkmode.js"></script>
+  <script>
+    const fontSizeSelect = document.getElementById('fontSize');
+    const colorblindToggle = document.getElementById('colorblindToggle');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const voiceToggle = document.getElementById('voiceToggle');
+    const accessibilityDiv = document.getElementById('accessibility');
+    const accessibilityToggle = document.getElementById('accessibilityToggle');
+    let speechInstance = null;
+
+    accessibilityToggle.addEventListener('click', () => {
+      accessibilityDiv.classList.toggle('hidden');
+      const isExpanded = accessibilityToggle.getAttribute('aria-expanded') === 'true';
+      accessibilityToggle.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    window.onload = () => {
+      const size = localStorage.getItem('fontSize') || 'normal';
+      fontSizeSelect.value = size;
+      document.body.classList.toggle('large-text', size === 'large');
+
+      const isColorblind = localStorage.getItem('colorblind') === 'true';
+      document.body.classList.toggle('colorblind-mode', isColorblind);
+      colorblindToggle.checked = isColorblind;
+
+      const isDark = localStorage.getItem('darkmode') === 'true';
+      document.body.classList.toggle('dark-mode', isDark);
+      darkModeToggle.checked = isDark;
+    };
+
+    fontSizeSelect.addEventListener('change', () => {
+      const size = fontSizeSelect.value;
+      document.body.classList.toggle('large-text', size === 'large');
+      localStorage.setItem('fontSize', size);
+    });
+
+    colorblindToggle.addEventListener('change', () => {
+      const enabled = colorblindToggle.checked;
+      document.body.classList.toggle('colorblind-mode', enabled);
+      localStorage.setItem('colorblind', enabled);
+    });
+
+    darkModeToggle.addEventListener('change', () => {
+      const enabled = darkModeToggle.checked;
+      document.body.classList.toggle('dark-mode', enabled);
+      localStorage.setItem('darkmode', enabled);
+    });
+
+    voiceToggle.addEventListener('change', () => {
+      if (voiceToggle.checked) {
+        const content = document.body.innerText;
+        speechInstance = new SpeechSynthesisUtterance(content);
+        window.speechSynthesis.speak(speechInstance);
+      } else {
+        window.speechSynthesis.cancel();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!-- suivi.html optimisé -->
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Suivi consommation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="styles/Dark-mode.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/nav.css">
+</head>
+<body>
+  <div class="app">
+    <header role="banner">
+      <h1>Suivi consommation</h1>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Consommation en direct</h2>
+        <div class="sensor"><span>🚿 Douche</span><span>-- L</span></div>
+        <div class="sensor"><span>🚽 Toilettes</span><span>-- L</span></div>
+        <div class="sensor"><span>🚰 Robinet cuisine</span><span>-- L</span></div>
+        <div class="sensor"><span>🧼 Lave-linge</span><span>-- L</span></div>
+        <div class="sensor"><span>🍽️ Lave-vaisselle</span><span>-- L</span></div>
+        <div class="total">Total aujourd'hui : -- L</div>
+        <div class="total">Total cette semaine : -- L</div>
+      </section>
+      <section class="house-diagram">
+        <h2>Schéma de la maison</h2>
+        <img src="images/maison-schema.png" alt="Schéma des capteurs dans la maison" />
+        <p class="caption">Visualisation des capteurs connectés (Wi-Fi / Zigbee) aux points d’eau.</p>
+      </section>
+    </main>
+    <script src="js/nav.js"></script>
+    <nav class="nav">
+      <!-- Navigation List -->
+      <ul class="nav-content">
+          <!-- Home Navigation Item -->
+          <li class="nav-list">
+              <a href="index.html" class="link-item active">
+                  <i class='bx bxs-home link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Home</span> <!-- Text for Home -->
+              </a>
+          </li>
+          <!-- Content Navigation Item -->
+          <li class="nav-list">
+              <a href="conseils.html" class="link-item">
+                  <i class='bx bxs-help-circle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Conseils</span> <!-- Text for Content -->
+              </a>
+          </li>
+          <!-- Analytics Navigation Item -->
+          <li class="nav-list">
+              <a href="profil.html" class="link-item">
+                  <i class='bx bxs-user link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Profil</span> <!-- Text for Analytics -->
+              </a>
+          </li>
+          <!-- Comments Navigation Item -->
+          <li class="nav-list">
+              <a href="suivi.html" class="link-item">
+                  <i class='bx bxs-bar-chart-alt-2 link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Suivi</span> <!-- Text for Comments -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+              <a href="recyclage.html" class="link-item">
+                  <i class='bx bx-recycle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Recyclage</span> <!-- Text for Profile -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+            <a href="donnees.html" class="link-item">
+                <i class='bx bxs-data link-icon'></i> <!-- Icon -->
+                <span class="link-text">Données</span> <!-- Text for Profile -->
+            </a>
+        </li>
+          <!-- Indicator for Active Navigation Item -->
+          <span class="indicator"></span>
+      </ul>
+  </nav>
+  </div>
+  <script src="darkmode.js"></script> 
+</body>
+</html>

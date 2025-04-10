@@ -1,0 +1,204 @@
+/* style.css global pour EauZen */
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 430px;
+  margin: auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  overflow-y: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+header {
+  background-color: var(--header);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+main {
+  padding: 20px;
+  flex-grow: 1;
+  padding-bottom: 70px; /* pour éviter chevauchement avec le menu fixe */
+  background: var(--bg);
+}
+
+.card {
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 16px;
+}
+
+.card h2 {
+  font-size: 16px;
+  color: #007ba7;
+  margin-bottom: 10px;
+}
+
+.sensor,
+.filter-status,
+.metrics {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.total {
+  font-weight: bold;
+  color: #2e7d32;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button {
+  width: 100%;
+  background: var(--bg);
+  border: 2px solid #007ba7;
+  color: #007ba7;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.button:hover {
+  background: #007ba7;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--nav-bg);
+  border-top: 1px solid #eee;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 430px;
+  margin: auto;
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007ba7;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px;
+  transition: background-color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #e0f7fa;
+  border-radius: 6px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: auto;
+}
+
+.bubble {
+  background-color: var(--nav-bg);
+  color: #007ba7;
+  padding: 12px 16px;
+  margin: 5px 0;
+  border-radius: 24px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.bubble:hover {
+  background-color: #bde9f1;
+}
+
+.gauge {
+  width: 100%;
+  background: var(--nav-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10px;
+  height: 20px;
+}
+
+.gauge-fill {
+  background-color: #2e7d32;
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+.filters-image,
+.house-diagram {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.filters-image img,
+.house-diagram img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.caption {
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+  text-align: center;
+}
+
+body.large-text {
+  font-size: 1.3em;
+}
+body.colorblind-mode {
+  filter: hue-rotate(90deg);
+}
+.button {
+  border-color: var(--btn-border);
+  color: var(--btn-border);
+}
+.button:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+

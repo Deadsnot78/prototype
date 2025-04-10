@@ -1,0 +1,103 @@
+<!-- recyclage.html optimisé -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Recyclage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="styles/Dark-mode.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/nav.css">
+</head>
+<body>
+  <div class="app">
+    <header role="banner">
+      <h1>Recyclage d'eau</h1>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Niveau de la cuve</h2>
+        <div class="gauge" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+          <div class="gauge-fill" style="width: 70%"></div>
+        </div>
+        <div class="metrics">
+          <span>Capacité actuelle :</span>
+          <span>700 L / 1000 L</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Volume d'eau recyclée</h2>
+        <div class="metrics"><span>📅 Aujourd'hui :</span><span>15 L</span></div>
+        <div class="metrics"><span>📈 Cette semaine :</span><span>103 L</span></div>
+        <div class="metrics"><span>📊 Ce mois :</span><span>428 L</span></div>
+      </section>
+
+      <section class="card">
+        <h2>État des filtres</h2>
+        <div class="filter-status"><span>Filtre 1 - Sédiments 20 m</span><span class="status-ok">✅ OK</span></div>
+        <div class="filter-status"><span>Filtre 2 - Sédiments 5 m</span><span class="status-warning">⚠️ À vérifier</span></div>
+        <div class="filter-status"><span>Filtre 3 - KDF Charbon Actif</span><span class="status-ok">✅ OK</span></div>
+        <div class="filter-status"><span>Filtre 4 - Carbon block</span><span class="status-warning">⚠️ Nettoyage conseillé</span></div>
+        <div class="filter-status"><span>Dernier entretien :</span><span>14 mars 2025</span></div>
+        <div class="filters-image">
+          <img src="images/filtres.jpg" alt="Schéma du système de filtration" />
+        </div>
+      </section>
+    </main>
+    <script src="js/nav.js"></script>
+    <nav class="nav">
+      <!-- Navigation List -->
+      <ul class="nav-content">
+          <!-- Home Navigation Item -->
+          <li class="nav-list">
+              <a href="index.html" class="link-item active">
+                  <i class='bx bxs-home link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Home</span> <!-- Text for Home -->
+              </a>
+          </li>
+          <!-- Content Navigation Item -->
+          <li class="nav-list">
+              <a href="conseils.html" class="link-item">
+                  <i class='bx bxs-help-circle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Conseils</span> <!-- Text for Content -->
+              </a>
+          </li>
+          <!-- Analytics Navigation Item -->
+          <li class="nav-list">
+              <a href="profil.html" class="link-item">
+                  <i class='bx bxs-user link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Profil</span> <!-- Text for Analytics -->
+              </a>
+          </li>
+          <!-- Comments Navigation Item -->
+          <li class="nav-list">
+              <a href="suivi.html" class="link-item">
+                  <i class='bx bxs-bar-chart-alt-2 link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Suivi</span> <!-- Text for Comments -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+              <a href="recyclage.html" class="link-item">
+                  <i class='bx bx-recycle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Recyclage</span> <!-- Text for Profile -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+            <a href="donnees.html" class="link-item">
+                <i class='bx bxs-data link-icon'></i> <!-- Icon -->
+                <span class="link-text">Données</span> <!-- Text for Profile -->
+            </a>
+        </li>
+          <!-- Indicator for Active Navigation Item -->
+          <span class="indicator"></span>
+      </ul>
+  </nav>
+  </div>
+  <script src="darkmode.js"></script>
+</body>
+</html>

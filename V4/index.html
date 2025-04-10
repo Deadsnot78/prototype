@@ -1,0 +1,99 @@
+<!-- index.html optimisé -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="styles/Dark-mode.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  
+</head>
+<body>
+  <div class="app">
+    <header role="banner">
+      <h1>EauZen</h1>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Suivi de la consommation d’eau</h2>
+        <strong>210 L</strong>
+        <p class="impact">Objectif atteint ✅<br>Impact : 12 kg CO₂ / 5 €</p>
+      </section>
+
+      <button class="button">Voir mes gestes éco</button>
+      <button class="button">Carte des actions locales</button>
+
+      <section class="card">
+        <h2>Suivi de la consommation</h2>
+        <p>Entrez votre consommation ou liez un compteur</p>
+      </section>
+
+      <section class="card">
+        <h2>Gestes éco-responsables</h2>
+        <p>Adoptez des gestes pour économiser et dépolluer</p>
+      </section>
+
+      <section class="card">
+        <h2>Engagement local</h2>
+        <p>Participez à des actions locales sur l’eau</p>
+      </section>
+    </main>
+    <script src="js/nav.js"></script>
+    <nav class="nav">
+      <!-- Navigation List -->
+      <ul class="nav-content">
+          <!-- Home Navigation Item -->
+          <li class="nav-list">
+              <a href="index.html" class="link-item active">
+                  <i class='bx bxs-home link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Home</span> <!-- Text for Home -->
+              </a>
+          </li>
+          <!-- Content Navigation Item -->
+          <li class="nav-list">
+              <a href="conseils.html" class="link-item">
+                  <i class='bx bxs-help-circle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Conseils</span> <!-- Text for Content -->
+              </a>
+          </li>
+          <!-- Analytics Navigation Item -->
+          <li class="nav-list">
+              <a href="profil.html" class="link-item">
+                  <i class='bx bxs-user link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Profil</span> <!-- Text for Analytics -->
+              </a>
+          </li>
+          <!-- Comments Navigation Item -->
+          <li class="nav-list">
+              <a href="suivi.html" class="link-item">
+                  <i class='bx bxs-bar-chart-alt-2 link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Suivi</span> <!-- Text for Comments -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+              <a href="recyclage.html" class="link-item">
+                  <i class='bx bx-recycle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Recyclage</span> <!-- Text for Profile -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+            <a href="donnees.html" class="link-item">
+                <i class='bx bxs-data link-icon'></i> <!-- Icon -->
+                <span class="link-text">Données</span> <!-- Text for Profile -->
+            </a>
+        </li>
+          <!-- Indicator for Active Navigation Item -->
+          <span class="indicator"></span>
+      </ul>
+  </nav>
+  </div>
+  <script src="darkmode.js"></script>
+  
+</body>
+</html>

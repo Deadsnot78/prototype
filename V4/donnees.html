@@ -1,0 +1,105 @@
+<!-- donnees.html - Données personnelles et vie privée -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EauZen - Données personnelles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="styles/Dark-mode.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/nav.css">
+</head>
+<body>
+  <div class="app">
+    <header role="banner">
+      <h1>Vie privée & données</h1>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Respect de la vie privée</h2>
+        <p>✅ EauZen est un <strong>prototype</strong> : aucune donnée réelle n'est collectée.</p>
+        <p>✅ Aucune transmission à des services tiers, aucun cookie caché.</p>
+        <p>✅ Le respect de la vie privée est au cœur de nos valeurs.</p>
+      </section>
+
+      <section class="card">
+        <h2>Quelles données sont simulées ?</h2>
+        <ul>
+          <li>📊 Consommation d'eau par pièce (robinet, douche, etc.)</li>
+          <li>📍 Localisation estimée pour les actions locales</li>
+          <li>💧 Volume d'eau recyclé (capteurs fictifs)</li>
+          <li>⏱️ Temps passé sur l'application (pour suivi statistique)</li>
+        </ul>
+        <p>Ces données sont <strong>stockées localement</strong> dans l'application pour la démonstration.</p>
+      </section>
+
+      <section class="card">
+        <h2>Conformité RGPD</h2>
+        <p>📦 Les données simulées sont gérées localement et ne sont <strong>pas exploitées à des fins commerciales</strong>.</p>
+        <p>🔐 Aucune inscription, aucun profil personnel n’est transmis.</p>
+      </section>
+
+      <section class="card">
+        <h2>Souveraineté numérique</h2>
+        <p>EauZen fonctionne de façon <strong>autonome</strong>, sans dépendance à des systèmes fermés.</p>
+        <p>L'utilisateur garde le contrôle total sur ses données affichées.</p>
+      </section>
+    <p class="footer-indicator">✅ Optimisé pour faibles débits & appareils modestes</p>
+    </main>
+    <script src="js/nav.js"></script>
+    <nav class="nav">
+      <!-- Navigation List -->
+      <ul class="nav-content">
+          <!-- Home Navigation Item -->
+          <li class="nav-list">
+              <a href="index.html" class="link-item active">
+                  <i class='bx bxs-home link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Home</span> <!-- Text for Home -->
+              </a>
+          </li>
+          <!-- Content Navigation Item -->
+          <li class="nav-list">
+              <a href="conseils.html" class="link-item">
+                  <i class='bx bxs-help-circle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Conseils</span> <!-- Text for Content -->
+              </a>
+          </li>
+          <!-- Analytics Navigation Item -->
+          <li class="nav-list">
+              <a href="profil.html" class="link-item">
+                  <i class='bx bxs-user link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Profil</span> <!-- Text for Analytics -->
+              </a>
+          </li>
+          <!-- Comments Navigation Item -->
+          <li class="nav-list">
+              <a href="suivi.html" class="link-item">
+                  <i class='bx bxs-bar-chart-alt-2 link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Suivi</span> <!-- Text for Comments -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+              <a href="recyclage.html" class="link-item">
+                  <i class='bx bx-recycle link-icon'></i> <!-- Icon -->
+                  <span class="link-text">Recyclage</span> <!-- Text for Profile -->
+              </a>
+          </li>
+          <!-- Profile Navigation Item -->
+          <li class="nav-list">
+            <a href="donnees.html" class="link-item">
+                <i class='bx bxs-data link-icon'></i> <!-- Icon -->
+                <span class="link-text">Données</span> <!-- Text for Profile -->
+            </a>
+        </li>
+          <!-- Indicator for Active Navigation Item -->
+          <span class="indicator"></span>
+      </ul>
+  </nav>
+  </div>
+  <script src="darkmode.js"></script>
+  
+</body>
+</html>
